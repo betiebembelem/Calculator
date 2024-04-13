@@ -1,5 +1,7 @@
 package calculatorm.operations;
 
+import calculatorm.CalcException;
+
 public class Operation {
 
     public static double add(double a, double b) {
@@ -14,9 +16,9 @@ public class Operation {
         return a * b;
     }
 
-    public static double divide(double a, double b) {
+    public static double divide(double a, double b) throws CalcException {
         if (b == 0) {
-            throw new ArithmeticException("Division by zero");
+            throw new CalcException("Деление на ноль");
         }
         return a / b;
     }

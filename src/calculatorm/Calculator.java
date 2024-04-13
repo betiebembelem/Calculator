@@ -9,7 +9,7 @@ import java.util.List;
 
 public class Calculator {
     // ћетод дл€ выполнени€ бинарной операции
-    private static double calculateBinaryOperation(double sym1, String operator, double sym2) {
+    private static double calculateBinaryOperation(double sym1, String operator, double sym2) throws CalcException {
         return switch (operator) {
             // ¬ыбор операции в зависимости от оператора
             case "+" -> Operation.add(sym1, sym2);
