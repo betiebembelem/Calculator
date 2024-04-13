@@ -8,21 +8,21 @@ public class CalculatorM {
 
     public static void main(String[] args) {
         try (BufferedReader bReader = new BufferedReader(new InputStreamReader(System.in))) {
-            // Выводим приветственное сообщение и объясняем формат ввода
-            System.out.println("Калькулятор для выражений вида: \"Число1 Операция Число2\". Операции: + - * /");
-            // Бесконечный цикл для ввода и обработки выражений
+            // Р’С‹РІРѕРґРёРј РїСЂРёРІРµС‚СЃС‚РІРµРЅРЅРѕРµ СЃРѕРѕР±С‰РµРЅРёРµ Рё РѕР±СЉСЏСЃРЅСЏРµРј С„РѕСЂРјР°С‚ РІРІРѕРґР°
+            System.out.println("РљР°Р»СЊРєСѓР»СЏС‚РѕСЂ РґР»СЏ РІС‹СЂР°Р¶РµРЅРёР№ РІРёРґР°: \"Р§РёСЃР»Рѕ1 РћРїРµСЂР°С†РёСЏ Р§РёСЃР»Рѕ2\". РћРїРµСЂР°С†РёРё: + - * /");
+            // Р‘РµСЃРєРѕРЅРµС‡РЅС‹Р№ С†РёРєР» РґР»СЏ РІРІРѕРґР° Рё РѕР±СЂР°Р±РѕС‚РєРё РІС‹СЂР°Р¶РµРЅРёР№
             while (true) {
-                System.out.print("Введите выражение или 'exit' для выхода: ");
+                System.out.print("Р’РІРµРґРёС‚Рµ РІС‹СЂР°Р¶РµРЅРёРµ РёР»Рё 'exit' РґР»СЏ РІС‹С…РѕРґР°: ");
                 String calcString = bReader.readLine();
                 if (calcString.equalsIgnoreCase("exit")) {
-                    break; // Выход из цикла, если пользователь ввел 'exit'
+                    break; // Р’С‹С…РѕРґ РёР· С†РёРєР»Р°, РµСЃР»Рё РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ РІРІРµР» 'exit'
                 }
                 Calculator calculator = new Calculator();
                 String result = calculator.result(calcString);
-                System.out.println("Ответ: " + result);
+                System.out.println("РћС‚РІРµС‚: " + result);
             }
         } catch (CalcException | IOException e) {
-            System.out.println("Произошла ошибка: " + e.getMessage());
+            System.out.println("РџСЂРѕРёР·РѕС€Р»Р° РѕС€РёР±РєР°: " + e.getMessage());
         }
     }
 }
